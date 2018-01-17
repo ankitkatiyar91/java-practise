@@ -1,2 +1,2 @@
-# hello-world
-this is my first test project on github repository to undestand how it works
+# Some Small problems and Learnings
+This Repo is not intented to solve any specific problem in a whole. It contains various examples and peice of code to learn some Java Concepts and APIs.
