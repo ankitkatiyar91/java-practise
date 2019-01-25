@@ -1,6 +1,8 @@
 package learning;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -13,7 +15,7 @@ public class CommonNumberFinder
 
     public static void main(String[] args)
     {
-        findCountOfNumber(Arrays.asList(new List[] { list1, list2 }), 6);
+        findCountOfNumber(new ArrayList<List<Number>>((Collection<? extends List<Number>>) Arrays.asList(new List[] { list1, list2 })), 6);
     }
 
     private static void findCountOfNumber(final List<List<Number>> lists, final Number num)

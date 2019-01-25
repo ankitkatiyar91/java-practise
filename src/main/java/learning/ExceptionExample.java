@@ -26,7 +26,7 @@ public class ExceptionExample
             System.out.println("Read:" + reader.readLine());
         }
         catch (IOException e)
-        {
+        {	
             e.printStackTrace();
         }
 

@@ -7,7 +7,7 @@ public class Test
 {
     public static void main(String[] args)
     {
-        // stiarcase();
+        stiarcase();
 
         sum(new int[] { 1, 2, 3, 4, 5 });
 

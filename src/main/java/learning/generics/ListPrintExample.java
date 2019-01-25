@@ -8,7 +8,7 @@ public class ListPrintExample
 {
     public static void main(String[] args)
     {
-        //listPrintTest();
+        listPrintTest();
         numberAddTest();
     }
 
