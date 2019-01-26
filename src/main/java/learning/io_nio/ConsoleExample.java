@@ -2,6 +2,11 @@ package learning.io_nio;
 
 import java.io.Console;
 
+/**
+ * Example of a Console Application
+ * @author Ankit Katiyar
+ *
+ */
 public class ConsoleExample
 {
     public static void main(String[] args)
