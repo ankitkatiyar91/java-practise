@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  Copyright 2004 The Apache Software Foundation
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+
+<!-- JSPC servlet mappings start -->
+  <servlet>
+       <servlet-name>servletMagic</servlet-name>
+       <servlet-class>ServletMagic</servlet-class>
+       <init-param>
+          <param-name>listing</param-name>
+          <param-value>true</param-value>
+       </init-param>
+  </servlet>
+  <servlet-mapping>
+       <servlet-name>servletMagic</servlet-name>
+       <url-pattern>/callme</url-pattern>
+   </servlet-mapping>
+
+  <servlet>
+       <servlet-name>displayName</servlet-name>
+       <servlet-class>com.jp.DisplayName</servlet-class>
+  </servlet>
+  <servlet-mapping>
+       <servlet-name>displayName</servlet-name>
+       <url-pattern>/displayName</url-pattern>
+   </servlet-mapping>
+
+   <context-param>
+          <param-name>email</param-name>
+          <param-value>admin@gmail.com</param-value>
+   </context-param>
+
+ <context-param>
+       <param-name>driver</param-name>
+       <param-value>com.mysql.jdbc.Driver</param-value> 
+    </context-param>
+    <context-param>
+       <param-name>url</param-name>
+       <param-value>jdbc:mysql://localhost:3306/online</param-value> 
+    </context-param>
+    
+    <context-param>
+       <param-name>username</param-name>
+       <param-value>root</param-value> 
+    </context-param>
+    
+    <context-param>
+       <param-name>password</param-name>
+       <param-value>root</param-value> 
+    </context-param>
+    
+
+<!-- JSPC servlet mappings end -->
+
+</web-app>
