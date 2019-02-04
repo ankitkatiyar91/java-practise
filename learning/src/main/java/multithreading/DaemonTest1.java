@@ -1,4 +1,5 @@
-class ThreadOne extends Thread
+package multithreading;
+class ThreadOne2 extends Thread
 {
 public void run()
 {

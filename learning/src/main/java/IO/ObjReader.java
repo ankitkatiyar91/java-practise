@@ -1,3 +1,4 @@
+package IO;
 import java.io.*;
 
 class ObjReader
@@ -8,8 +9,8 @@ try
 {
 ObjectInputStream in=new ObjectInputStream(new FileInputStream("emp.data"));
 System.out.println("following objects are desirialized..");
-Emp e=(Emp)in.readObject();
-Emp f=(Emp)in.readObject();
+Employee1 e=(Employee1)in.readObject();
+Employee1 f=(Employee1)in.readObject();
 
 e.display();
 f.display();

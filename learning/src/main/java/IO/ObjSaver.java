@@ -1,3 +1,4 @@
+package IO;
 import java.io.*;
 
 class ObjSaver
@@ -7,8 +8,8 @@ public static void main(String ar[])
 try
 {
 ObjectOutputStream out=new ObjectOutputStream(new FileOutputStream("emp.data"));
-Emp e=new Emp("amit","manager",45000);
-Emp f=new Emp("rajat","team leader",87000);
+Employee1 e=new Employee1("amit","manager",45000);
+Employee1 f=new Employee1("rajat","team leader",87000);
 System.out.println("Serializing following objects..");
 e.display();
 f.display();

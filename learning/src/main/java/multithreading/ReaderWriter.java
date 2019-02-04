@@ -1,14 +1,38 @@
+package multithreading;
 class Buffer
 {
 int a;
+boolean written=false;
+
 public synchronized void write(int x)
 {
+if(written)
+{
+System.out.println("writer entered out of turn , suspending...");
+try
+{
+wait();
+}catch(Exception e){}
+}
 a=x;
 System.out.println(a+" is written....");
+notify();
+written=true;
 }
+
 public synchronized void read()
 {
+if(!written)
+{
+System.out.println("reader entered monitor out of turn ,suspending it....");
+try
+{
+wait();
+}catch(Exception e){}
+}
 System.out.println(a+" is read....");
+written=false;
+notify();
 }
 }
 
@@ -50,6 +74,7 @@ System.out.println("Creating Buffer and starting reader and Writer threads....."
 Buffer buf=new Buffer();
 ReaderThread r=new ReaderThread(buf);
 WriterThread w=new WriterThread(buf);
+
 r.start();
 w.start();
 }

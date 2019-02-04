@@ -1,3 +1,4 @@
+package multithreading;
 import java.io.*;
 
 class MyReader

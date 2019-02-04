@@ -1,3 +1,4 @@
+package multithreading;
 class MyThread extends Thread
 {
 public MyThread()

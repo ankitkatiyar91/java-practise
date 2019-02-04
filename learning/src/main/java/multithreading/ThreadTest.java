@@ -1,3 +1,4 @@
+package multithreading;
 class ThreadTest
 {
 public static void main(String ar[])

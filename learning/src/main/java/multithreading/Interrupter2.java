@@ -1,7 +1,8 @@
-class MyThread extends Thread
+package multithreading;
+class MyThread2 extends Thread
 {
 
-public MyThread(ThreadGroup g,String name)
+public MyThread2(ThreadGroup g,String name)
 {
 super(g,name);
 start();
@@ -32,8 +33,8 @@ public static void main(String ar[])
 System.out.println("starting lazy thread and giving it five seconds to complete....");
 ThreadGroup g=new ThreadGroup("my group");
 
-MyThread th=new MyThread(g,"lazy");
-MyThread th1=new MyThread(g,"super lazy");
+MyThread2 th=new MyThread2(g,"lazy");
+MyThread2 th1=new MyThread2(g,"super lazy");
 try
 {
 Thread.sleep(5000);
