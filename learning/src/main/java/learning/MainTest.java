@@ -1,13 +1,15 @@
 package learning;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class MainTest {
 
 	public static void main(String[] args) {
 
 		System.out.println(new Drived().x);
-
-		int result=120;
-		System.out.printf("%d %d %d",result,result++,++result);
+AtomicInteger
+		int result = 120;
+		System.out.printf("%d %d %d", result, result++, ++result);
 		String s = "from SeatAllocation allocation " + "where allocation.baseActivationKey = :baseActivationKey "
 				+ "and (allocation.seat.endpoint.endpointMemo = :endpointMemo or "
 				+ "(allocation.seat.endpoint.endpointMemo is null and "
@@ -16,6 +18,22 @@ public class MainTest {
 				+ "order by allocation.lastLicenseIssueDate desc";
 		System.out.println("Query- " + s);
 
+	}
+
+	public static int fact(int n) {
+		if (n <= 1) {
+			// if a number is 1 or less than on then factorial will be 1
+			return 1;
+		} 
+		else {
+			/*this part will execute only of number is greater than 1, ex 2,3
+			 * According to factorial logic, factorial of a number n will be (n * factorial of (n-1))
+			 * Ex: factorial of 2 = 2*1
+			 *  factorial of 3 = 3*2*1
+			 *  factorial of 4 = 4*3*2*1
+			*/
+			return n * fact(n - 1);
+		}
 	}
 
 	private static void test() {
