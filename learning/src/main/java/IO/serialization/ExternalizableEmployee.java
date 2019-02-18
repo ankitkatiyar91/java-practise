@@ -11,7 +11,7 @@ import java.io.Serializable;
  * @author Ankit Katiyar
  * 
  * @category bytefold
- * @see {@link https://www.bytefold.com/system-properties-in-java/}
+ * @see {@link http://www.bytefold.com/serializing-an-object-with-static-property/}
  *
  */
 public class ExternalizableEmployee implements Externalizable {

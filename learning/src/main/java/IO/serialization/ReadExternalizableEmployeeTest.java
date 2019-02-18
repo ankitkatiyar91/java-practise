@@ -9,7 +9,7 @@ import java.io.ObjectInputStream;
  * @author Ankit Katiyar
  * 
  * @category bytefold
- * @see {@link https://www.bytefold.com/system-properties-in-java/}
+ * @see {@link http://www.bytefold.com/serializing-an-object-with-static-property/}
  *
  */
 
