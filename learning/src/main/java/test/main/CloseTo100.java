@@ -1,4 +1,4 @@
-package com.test.main;
+package test.main;
 
 public class CloseTo100 {
 

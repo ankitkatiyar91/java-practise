@@ -1,4 +1,4 @@
-package com.locale;
+package locale;
 
 import java.util.Locale;
 

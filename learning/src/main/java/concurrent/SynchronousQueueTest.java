@@ -1,4 +1,4 @@
-package com.concurrent;
+package concurrent;
 
 import java.util.Date;
 import java.util.concurrent.BlockingQueue;

@@ -1,4 +1,4 @@
-package com.inheritance;
+package inheritance;
 
 public class Puppy extends Dog {
 

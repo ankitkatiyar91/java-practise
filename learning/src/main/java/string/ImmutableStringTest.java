@@ -1,8 +1,8 @@
-package com.string;
+package string;
 
 import java.util.HashMap;
 
-public class ImmutableTest {
+public class ImmutableStringTest {
 
 	public static void main(String[] args) {
 		HashMap<Integer, String> test = new HashMap<Integer, String>();

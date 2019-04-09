@@ -1,4 +1,4 @@
-package com.util;
+package util;
 
 public class StringWhiteSpaceRemover {
 
@@ -7,7 +7,7 @@ public class StringWhiteSpaceRemover {
 	 */
 	public static void main(String[] args) {
 		String s="Tata Power Trading Company Limited";
-		s.replaceAll("\\s+", " AND ");
+		s.replaceAll("\\s", " AND ");
 		System.out.println(s);
 
 	}

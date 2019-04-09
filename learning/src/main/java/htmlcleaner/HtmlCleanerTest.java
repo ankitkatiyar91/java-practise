@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.htmlcleaner;
+package htmlcleaner;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -31,7 +31,7 @@ public class HtmlCleanerTest {
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) {/*
 
 		while (true) {
 			new Thread(new Runnable() {
@@ -68,13 +68,13 @@ public class HtmlCleanerTest {
 		}
 
 	
-/*	try {
+	try {
 		log("Started reading");
 		readThread(new URL("http://localhost:8080/TestingPages/"), 3000);
 	} catch (MalformedURLException e) {
 		e.printStackTrace();
-	}	*/
-	}
+	}	
+	*/}
 
 	private static void log(String message) {
 		System.out.println(new Date() + " - " + message);

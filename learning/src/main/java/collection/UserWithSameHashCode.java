@@ -1,6 +1,6 @@
 package collection;
 
-public class User {
+public class UserWithSameHashCode {
 
 	private String name;
 	private Integer id;
@@ -21,7 +21,7 @@ public class User {
 		this.id = id;
 	}
 
-	public User(String name, Integer id) {
+	public UserWithSameHashCode(String name, Integer id) {
 		super();
 		this.name = name;
 		this.id = id;
@@ -34,20 +34,17 @@ public class User {
 
 	@Override
 	public int hashCode() {
-		final int prime = 31;
+		// always return same hashcode
 		int result = 1;
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
-
-		System.out.println("User.hashCode() Called for ID: " + this.id + " --" + result);
+		System.out.println("User.hashCode() Called for ID: " + this.id + " hash--" + result);
 		return result;
 	}
 
 	@Override
 	public boolean equals(Object obj) {
 		try {
-			System.out.println("User.equals() Matching current ID:" + this.id + " TO --"
-					+ ((User) obj).id);
+			System.out.println(
+					"User.equals() Matching current ID:" + this.id + " TO ID: " + ((UserWithSameHashCode) obj).id);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -57,7 +54,7 @@ public class User {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		User other = (User) obj;
+		UserWithSameHashCode other = (UserWithSameHashCode) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;

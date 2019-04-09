@@ -1,4 +1,4 @@
-package com.stream;
+package stream;
 
 import java.util.function.Consumer;
 import java.util.stream.Stream;

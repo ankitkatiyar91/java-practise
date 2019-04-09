@@ -28,6 +28,7 @@ public class BitOperatorTest
         // System.out.println();
         // }
         System.out.println(Modifier.isFinal(Modifier.FINAL & ~Modifier.FINAL));
+        System.out.println((1<<30));
         new BitOperatorTest().test();
     }
 

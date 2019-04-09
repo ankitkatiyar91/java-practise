@@ -1,4 +1,4 @@
-package com.observerTest;
+package observer;
 
 public class ObserverTest {
 

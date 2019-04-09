@@ -1,4 +1,4 @@
-package com.concurrent;
+package concurrent;
 
 import java.util.Date;
 import java.util.concurrent.ArrayBlockingQueue;
@@ -37,7 +37,7 @@ class Producer implements Runnable {
 	public void run() {
 		for (;;) {
 			if (queue.isEmpty()) {
-				queue.add(new StringBuffer("Producer Message " + new Date()));
+				queue.add(new StringBuffer("Producer Message " + System.nanoTime()));
 				try {
 					Thread.sleep(1000);
 				} catch (InterruptedException e) {
@@ -64,7 +64,7 @@ class Consumer implements Runnable {
 		for (;;) {
 			try {
 
-				System.out.println("Consumer Got- " + queue.take()+" AT "+new Date());
+				System.out.println("Consumer Got- " + queue.take()+" AT "+System.nanoTime());
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

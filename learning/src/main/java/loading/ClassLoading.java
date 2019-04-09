@@ -1,4 +1,4 @@
-package com.loading;
+package loading;
 
 public class ClassLoading {
 

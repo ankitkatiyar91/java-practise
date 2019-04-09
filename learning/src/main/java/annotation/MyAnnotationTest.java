@@ -1,7 +1,9 @@
-package learning;
+package annotation;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.AnnotatedType;
+
+import learning.MyAnnotationObject;
 
 public class MyAnnotationTest
 {

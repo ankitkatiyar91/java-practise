@@ -1,4 +1,4 @@
-package com.autocloseable;
+package autocloseable;
 
 public class AutoCloseableTest {
 

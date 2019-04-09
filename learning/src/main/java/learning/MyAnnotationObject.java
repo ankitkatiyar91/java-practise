@@ -1,5 +1,7 @@
 package learning;
 
+import annotation.MyAnnotation;
+
 @MyAnnotation(user = User.SOME)
 public class MyAnnotationObject
 {

@@ -1,8 +1,4 @@
-package com.test.main;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.Enumeration;
+package test.main;
 
 public class Test {
 
