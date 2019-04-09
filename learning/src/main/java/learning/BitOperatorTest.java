@@ -28,7 +28,7 @@ public class BitOperatorTest
         // System.out.println();
         // }
         System.out.println(Modifier.isFinal(Modifier.FINAL & ~Modifier.FINAL));
-        // new BitOperatorTest().test();
+        new BitOperatorTest().test();
     }
 
     private void test()
