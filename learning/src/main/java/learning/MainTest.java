@@ -7,7 +7,6 @@ public class MainTest {
 	public static void main(String[] args) {
 
 		System.out.println(new Drived().x);
-AtomicInteger
 		int result = 120;
 		System.out.printf("%d %d %d", result, result++, ++result);
 		String s = "from SeatAllocation allocation " + "where allocation.baseActivationKey = :baseActivationKey "

@@ -11,13 +11,16 @@ import java.time.ZoneId;
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalAdjusters;
+import java.time.temporal.TemporalField;
+import java.time.temporal.WeekFields;
 import java.util.Date;
 
 public class DateTimeSimpleExample
 {
     public static void main(String[] args)
     {
-        //nextSunday();
+        nextSunday();
         // goBack();
         
         try {
@@ -56,7 +59,8 @@ public class DateTimeSimpleExample
         LocalDate date = LocalDate.now();
         if (date.getDayOfWeek() != DayOfWeek.SUNDAY)
         {
-            date = date.plus((DayOfWeek.SUNDAY.getValue() - date.getDayOfWeek().getValue()), ChronoUnit.DAYS);
+            //date = date.plus((DayOfWeek.SUNDAY.getValue() - date.getDayOfWeek().getValue()), ChronoUnit.DAYS);
+        	date = date.with(TemporalAdjusters.next(DayOfWeek.SUNDAY));
         }
         System.out.println("Next sunday on " + date);
         System.out.println(DayOfWeek.MONDAY.plus(7));
