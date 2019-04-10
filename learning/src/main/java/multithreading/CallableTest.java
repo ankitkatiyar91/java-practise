@@ -11,49 +11,45 @@ import java.util.concurrent.TimeUnit;
 
 public class CallableTest {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
-		Callable<String> myCallable=new MyCallable();
-		List<Future<String>> futures=new ArrayList<Future<String>>();
-		ExecutorService executorService=Executors.newFixedThreadPool(5);
+		Callable<String> myCallable = new MyCallable();
+		List<Future<String>> futures = new ArrayList<Future<String>>();
+		ExecutorService executorService = Executors.newFixedThreadPool(5);
 		try {
-			
-			for(int i=0;i<10;i++){
+
+			for (int i = 0; i < 10; i++) {
 				futures.add(executorService.submit(myCallable));
 			}
-		
 
 			executorService.awaitTermination(150, TimeUnit.MILLISECONDS);
-			
-		for (Future<String> future : futures) {
-			try {
-				System.out.println(future.get());
-			} catch (InterruptedException | ExecutionException e) {
-				e.printStackTrace();
+
+			for (Future<String> future : futures) {
+				try {
+					System.out.println(future.get());
+				} catch (InterruptedException | ExecutionException e) {
+					e.printStackTrace();
+				}
 			}
-		}
-		
-		System.out.println("Shuting executor");
-		
-		executorService.shutdown();
-		
-		}catch (Exception e) {
+
+			System.out.println("Shutting down executor");
+
+			executorService.shutdown();
+
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
 }
 
 class MyCallable implements Callable<String> {
-	private static int i = 0;
+	private volatile static int i = 0;
 
 	@Override
 	public String call() throws Exception {
 		i++;
 		if (i % 2 == 0) {
-			
+
 			System.out.println("MyCallable.call() " + i);
 			Thread.sleep(10);
 		}
