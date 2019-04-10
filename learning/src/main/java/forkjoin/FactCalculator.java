@@ -27,19 +27,16 @@ public class FactCalculator extends RecursiveAction {
 	protected void compute() {
 		this.total = this.total.multiply(val);
 		if (val.longValue() > end.longValue()) {
-			invokeAll(
-					new FactCalculator(val.divide(BigInteger.ONE
-							.add(BigInteger.ONE)), end, this.total),
-					new FactCalculator(val.subtract(BigInteger.ONE), val
-							.divide(BigInteger.ONE.add(BigInteger.ONE)),
+			invokeAll(new FactCalculator(val.divide(BigInteger.ONE.add(BigInteger.ONE)), end, this.total),
+					new FactCalculator(val.subtract(BigInteger.ONE), val.divide(BigInteger.ONE.add(BigInteger.ONE)),
 							this.total));
 		}
 	}
 
 	/*
 	 * public BigInteger fact(final BigInteger b, final BigInteger endb) {
-	 * BigInteger val = b; BigInteger t = BigInteger.ONE; while (val.longValue()
-	 * >= endb.longValue()) { t
+	 * BigInteger val = b; BigInteger t = BigInteger.ONE; while (val.longValue() >=
+	 * endb.longValue()) { t
 	 * =t.multiply(val.multiply(val.subtract(BigInteger.ONE))); } return t; }
 	 */
 	public static void main(String[] args) {
@@ -50,8 +47,7 @@ public class FactCalculator extends RecursiveAction {
 		ForkJoinPool joinPool = new ForkJoinPool(4);
 		joinPool.invoke(new FactCalculator(integer, BigInteger.ONE, out));
 
-		System.out.println("Normal Calculation-"
-				+ (System.currentTimeMillis() - startTime));
+		System.out.println("Normal Calculation-" + (System.currentTimeMillis() - startTime));
 		System.out.println(integer + " ---  " + out);
 	}
 }

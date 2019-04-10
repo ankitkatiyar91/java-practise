@@ -16,12 +16,12 @@ public class Concurrency3 {
 		}
 
 		System.out.println(myList);
-		
+
 		QuickSort<Integer> quickSort = new QuickSort<Integer>(myList);
 
 		ForkJoinPool pool = new ForkJoinPool();
 		pool.invoke(quickSort);
-		
+
 		System.out.println(myList);
 	}
 }

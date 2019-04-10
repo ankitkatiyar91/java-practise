@@ -2,16 +2,16 @@ package collection.list;
 
 import java.util.Iterator;
 
-public class MyList<T> implements Iterable<T> {
+public class MyLinkList<T> implements Iterable<T> {
 
-	private MyList<T> nextElement;
+	private MyLinkList<T> nextElement;
 	private T data;
 
-	public MyList() {
+	public MyLinkList() {
 		super();
 	}
 
-	public MyList(MyList<T> nextElement, T data) {
+	public MyLinkList(MyLinkList<T> nextElement, T data) {
 		super();
 		this.nextElement = nextElement;
 		this.data = data;
@@ -20,7 +20,7 @@ public class MyList<T> implements Iterable<T> {
 	@Override
 	public Iterator<T> iterator() {
 		return new Iterator<T>() {
-			MyList<T> next = MyList.this;
+			MyLinkList<T> next = MyLinkList.this;
 
 			@Override
 			public boolean hasNext() {
@@ -36,11 +36,11 @@ public class MyList<T> implements Iterable<T> {
 		};
 	}
 
-	public MyList<T> getNextElement() {
+	public MyLinkList<T> getNextElement() {
 		return nextElement;
 	}
 
-	public void setNextElement(MyList<T> nextElement) {
+	public void setNextElement(MyLinkList<T> nextElement) {
 		this.nextElement = nextElement;
 	}
 
@@ -52,7 +52,7 @@ public class MyList<T> implements Iterable<T> {
 		this.data = data;
 	}
 
-	public MyList<T> add(MyList<T> l) {
+	public MyLinkList<T> add(MyLinkList<T> l) {
 		return this.nextElement = l;
 	}
 

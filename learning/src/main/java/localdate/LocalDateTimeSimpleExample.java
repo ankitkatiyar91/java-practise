@@ -1,4 +1,4 @@
-package learning;
+package localdate;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -16,7 +16,7 @@ import java.time.temporal.TemporalField;
 import java.time.temporal.WeekFields;
 import java.util.Date;
 
-public class DateTimeSimpleExample
+public class LocalDateTimeSimpleExample
 {
     public static void main(String[] args)
     {

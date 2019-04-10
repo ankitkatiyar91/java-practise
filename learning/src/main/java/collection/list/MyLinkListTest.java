@@ -5,10 +5,10 @@ import java.util.Iterator;
 public class MyLinkListTest {
 
 	public static void main(String[] args) {
-		MyList<Integer> list = new MyList<Integer>();
+		MyLinkList<Integer> list = new MyLinkList<Integer>();
 		list.setData(1);
-		list.setNextElement(new MyList<Integer>(new MyList<Integer>(
-				new MyList<Integer>(null, 4), 3), 2));
+		list.setNextElement(new MyLinkList<Integer>(new MyLinkList<Integer>(
+				new MyLinkList<Integer>(null, 4), 3), 2));
 
 		Iterator<Integer> iterator = list.iterator();
 		while (iterator.hasNext()) {
