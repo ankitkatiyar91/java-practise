@@ -19,7 +19,7 @@ public class FactCalculator extends RecursiveAction {
 		this.end = end;
 		this.total = total;
 	}
-
+ 
 	public FactCalculator() {
 	}
 
