@@ -2,7 +2,6 @@ package concurrent;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -30,8 +29,12 @@ public class ConcurrentHashMapTest {
 		System.out.println("####### Printing #########");
 		for (Map.Entry<String, String> s : concurrentHashMap.entrySet()) {
 			System.out.println(s.getKey() + " : " + s.getValue());
+			concurrentHashMap.put("Extra--"+Math.random(), "ssd");
 		}
 		System.out.println("########### Print finish ##########");
+		for (Map.Entry<String, String> s : concurrentHashMap.entrySet()) {
+			System.out.println(s.getKey() + " : " + s.getValue());
+		}
 	}
 
 }

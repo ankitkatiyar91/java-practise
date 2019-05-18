@@ -12,7 +12,10 @@ public class ArrayListTest {
 
 		List<Employee> emp = Arrays.asList(new Employee(1), new Employee(2));
 
-		Map<Integer, Employee> map = emp.stream().collect(Collectors.toMap(el -> el.getId(), el -> el));
+		Map<Integer, Employee> map = emp.stream().collect(Collectors.toMap(Employee::getId, el -> el));
+		System.out.println(map);
+
+		map = emp.stream().collect(Collectors.toMap(el -> el.getId(), el -> el));
 		System.out.println(map);
 	}
 

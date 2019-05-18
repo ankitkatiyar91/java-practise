@@ -9,9 +9,9 @@ import java.lang.annotation.Target;
 
 import learning.User;
 
-@Retention(RetentionPolicy.SOURCE)
+@Retention(RetentionPolicy.RUNTIME)
 @Target(value = { LOCAL_VARIABLE, ANNOTATION_TYPE, ElementType.TYPE })
-public @interface MyAnnotation
+public @interface MyRuntimeAnnotation
 {
     String name() default " jsahdksajd";
 

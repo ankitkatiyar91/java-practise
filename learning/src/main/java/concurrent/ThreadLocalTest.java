@@ -11,10 +11,8 @@ public class ThreadLocalTest {
 
 	public static void main(String[] args) {
 		System.out.println("ThreadLocalTest.main()");
-		ThreadLocalGetter s = new ThreadLocalGetter();
-		s.setName("First");
-		ThreadLocalGetter s1 = new ThreadLocalGetter();
-		s1.setName("Second");
+		ThreadLocalGetter s = new ThreadLocalGetter("First");
+		ThreadLocalGetter s1 = new ThreadLocalGetter("Second");
 		new Thread(s).start();
 		new Thread(s1).start();
 	}
@@ -47,8 +45,10 @@ public class ThreadLocalTest {
 			}
 		}
 
-		public void setName(String name) {
+		private ThreadLocalGetter(String name) {
+			super();
 			this.name = name;
 		}
+
 	}
 }

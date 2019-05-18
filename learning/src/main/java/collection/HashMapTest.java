@@ -1,4 +1,4 @@
-package learning;
+package collection;
 
 import java.util.HashMap;
 

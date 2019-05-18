@@ -16,7 +16,7 @@ public class CopyOnWriteArrayListTest {
 		viewer.setList(list);		
 		Thread t1=new Thread(viewer);
 		
-		Adder adder=new Adder();
+		Sum adder=new Sum();
 		adder.setList(list);
 		
 		Thread t=new Thread(adder);
@@ -25,7 +25,7 @@ public class CopyOnWriteArrayListTest {
 		
 	}
 
-	static class Adder implements Runnable{
+	static class Sum implements Runnable{
 
 		private List<Integer> list;
 		public void setList(List<Integer> list) {

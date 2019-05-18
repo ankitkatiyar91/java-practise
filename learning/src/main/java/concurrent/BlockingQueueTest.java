@@ -1,6 +1,5 @@
 package concurrent;
 
-import java.util.Date;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
@@ -9,16 +8,16 @@ public class BlockingQueueTest {
 	/**
 	 * @param args
 	 */
-	
+
 	public static void main(String[] args) {
-		final BlockingQueue<StringBuffer> queue=new ArrayBlockingQueue<>(1);
-		
-		Producer producer=new Producer();
+		final BlockingQueue<StringBuffer> queue = new ArrayBlockingQueue<>(1);
+
+		Producer producer = new Producer();
 		producer.setQueue(queue);
-		
-		Consumer consumer=new Consumer();
+
+		Consumer consumer = new Consumer();
 		consumer.setQueue(queue);
-		
+
 		new Thread(producer).start();
 		new Thread(consumer).start();
 	}
@@ -38,6 +37,7 @@ class Producer implements Runnable {
 		for (;;) {
 			if (queue.isEmpty()) {
 				queue.add(new StringBuffer("Producer Message " + System.nanoTime()));
+				// put is also relevant in this scenario.
 				try {
 					Thread.sleep(1000);
 				} catch (InterruptedException e) {
@@ -45,7 +45,7 @@ class Producer implements Runnable {
 				}
 			}
 		}
-		
+
 	}
 
 }
@@ -64,7 +64,7 @@ class Consumer implements Runnable {
 		for (;;) {
 			try {
 
-				System.out.println("Consumer Got- " + queue.take()+" AT "+System.nanoTime());
+				System.out.println("Consumer Got- " + queue.take() + " AT " + System.nanoTime());
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

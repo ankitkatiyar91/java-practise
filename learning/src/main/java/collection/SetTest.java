@@ -12,6 +12,7 @@ public class SetTest {
 	}
 
 	private static void userWithSameHashCodeTest() {
+		System.out.println("\n\n ================== SetTest.userWithSameHashCodeTest() =============== \n");
 		Set<UserWithSameHashCode> users = new HashSet<UserWithSameHashCode>();
 		for (int i = 0; i < 6; i++) {
 			users.add(new UserWithSameHashCode("name" + i, i));
@@ -26,6 +27,7 @@ public class SetTest {
 	}
 
 	private static void userTest() {
+		System.out.println("\n\n ========================= SetTest.userTest() ========================= \n");
 		Set<User> users = new HashSet<User>();
 		for (int i = 0; i < 6; i++) {
 			users.add(new User("name" + i, i));

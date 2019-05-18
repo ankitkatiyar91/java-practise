@@ -5,7 +5,7 @@ package sorting;
  * less than pivot and right is greater than pivot (considering ascending sort).
  * 
  * @author Ankit Katiyar(ankitkatiyar91)
- *
+ * Ref: https://www.hackerearth.com/practice/algorithms/sorting/quick-sort/visualize/
  */
 public class QuickSort {
 

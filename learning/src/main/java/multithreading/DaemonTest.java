@@ -23,7 +23,7 @@ class DaemonTest {
 		t.setDaemon(true);
 		t.start();
 
-		// Cannot set a thread daemon once started
+		// Cannot set a thread daemon once started, It will throw exception: Exception in thread "main" java.lang.IllegalThreadStateException
 //		t.setDaemon(true);
 		try {
 			System.out.println("suspending main()..");

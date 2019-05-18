@@ -16,7 +16,7 @@ class MyThread2 extends Thread {
 			System.out.println(name + " thread is resumed...");
 			System.out.println(name + " thread is exiting...");
 		} catch (InterruptedException e) {
-			System.out.println(e);
+			System.out.println("Got exception: " + e);
 		}
 	}
 }

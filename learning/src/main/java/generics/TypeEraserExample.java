@@ -1,4 +1,4 @@
-package learning.generics;
+package generics;
 
 public class TypeEraserExample
 {

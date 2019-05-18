@@ -1,4 +1,4 @@
-package learning;
+package annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Repeatable;

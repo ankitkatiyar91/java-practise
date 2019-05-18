@@ -12,7 +12,8 @@ import java.util.function.Function;
 /*
  * The body of a lambda expression can contain zero, one or more statements.
 When there is a single statement curly brackets are not mandatory and the return type of the anonymous function is the same as that of the body expression.
-When there are more than one statements, then these must be enclosed in curly brackets (a code block) and the return type of the anonymous function is the same as the type of the value returned within the code block, or void if nothing is returned.
+When there are more than one statements, then these must be enclosed in curly brackets (a code block) and the return type of the anonymous function is the 
+ same as the type of the value returned within the code block, or void if nothing is returned.
  */
 public class LambadaExpressionExample {
 	/*
@@ -54,7 +55,7 @@ public class LambadaExpressionExample {
 		int localVar = 10;
 		Runnable r = () -> {
 			int k = 0;
-			System.out.println("LambadaExpression Runnable k:" + k + " Effexctively final localVar:" + localVar);
+			System.out.println("LambadaExpression Runnable k:" + k + " Effectively final localVar:" + localVar);
 
 		};
 

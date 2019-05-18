@@ -5,10 +5,16 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class CountDownLatchTest {
 	public static void main(String[] args) {
+
 		AtomicInteger num = new AtomicInteger();
+
+		// number of counter
 		int count = 3;
+
+		// Latch Object
 		CountDownLatch latch = new CountDownLatch(count);
 
+		// Task for countDown calls.
 		Runnable countDownWorker = () -> {
 			try {
 				Thread.sleep(1000);
@@ -22,9 +28,7 @@ public class CountDownLatchTest {
 			}
 		};
 
-		new Thread(countDownWorker).start();
-		new Thread(countDownWorker).start();
-		new Thread(countDownWorker).start();
+		// Start the main thread to wait for countDown
 		new Thread(() -> {
 			try {
 				System.out.println("I am waiting for workers to complete");
@@ -35,8 +39,13 @@ public class CountDownLatchTest {
 			}
 		}).start();
 
+		// Start countDown
+		new Thread(countDownWorker).start();
+		new Thread(countDownWorker).start();
+		new Thread(countDownWorker).start();
+
 		// adding extra worker, We will notice that thread will not wait for these
-		// worker to finish
+		// worker to finish, Output could be intermittent
 		new Thread(countDownWorker).start();
 		new Thread(countDownWorker).start();
 	}

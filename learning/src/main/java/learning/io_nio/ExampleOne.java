@@ -1,7 +1,5 @@
 package learning.io_nio;
 
-import java.nio.file.Paths;
-
 public class ExampleOne
 {
 
