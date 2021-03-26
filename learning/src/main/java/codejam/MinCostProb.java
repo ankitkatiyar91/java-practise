@@ -50,16 +50,4 @@ public class MinCostProb
             }
         }
     }
-
-    static void printArray(int[][] inputData)
-    {
-        for (int[] is : inputData)
-        {
-            for (int j : is)
-            {
-                System.out.print(j + ",");
-            }
-            System.out.println("");
-        }
-    }
 }

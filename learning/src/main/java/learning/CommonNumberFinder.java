@@ -14,7 +14,7 @@ public class CommonNumberFinder
 
     public static void main(String[] args)
     {
-        findCountOfNumber(new ArrayList<List<Number>>((Collection<? extends List<Number>>) Arrays.asList(new List[] { list1, list2 })), 6);
+//        findCountOfNumber(new ArrayList<List<Number>>((Collection<? extends List<Number>>) Arrays.asList(new List[] { list1, list2 })), 6);
     }
 
     private static void findCountOfNumber(final List<List<Number>> lists, final Number num)
