@@ -60,7 +60,7 @@ public class ObjectAddressExample
         System.out.println("Location of Orange: "
                 + unsafe.objectFieldOffset(orangeField));
 
-        long size = sizeOf(new Integer(0));
+        long size = sizeOf( Integer.valueOf(0));
         long start = unsafe.staticFieldOffset(appleField);
         long address = unsafe.staticFieldOffset(ObjectAddressExample.class.getDeclaredField("apple1"));
         unsafe.copyMemory(start, address, size);
