@@ -1,5 +1,9 @@
 package util;
 
+/**
+ *  Not needed anymore. java.util.Arrays.toString() will do th work.</code>
+ */
+@Deprecated
 public class ArrayUtils {
 
     public static String printArray(int[][] inputData)
