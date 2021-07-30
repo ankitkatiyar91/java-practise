@@ -1,6 +1,6 @@
 package sorting;
 
-import util.ArrayUtils;
+import java.util.Arrays;
 
 /**
  * Select second element and then compare it with all elements in the sorted
@@ -20,23 +20,21 @@ public class InsertionSort {
         int[] in = new int[]{5, 3, 7, 7, 1, 3, 9, 0};
         long start = System.nanoTime();
         sort(in);
-        System.out.println(ArrayUtils.printArray(in) + " completed in " + (start - System.nanoTime()) + " nano seconds");
+        System.out.println(Arrays.toString(in) + " completed in " + (start - System.nanoTime()) + " nano seconds");
     }
 
     private static void sort(int[] in) {
-        int minIndex = 0, temp;
-        for (int i = 0; i < in.length; i++) {
-            minIndex = i;
-            for (int j = i + 1; j < in.length; j++) {
-                if (in[minIndex] > in[j]) {
-                    minIndex = j;
+        int temp;
+        for (int i = 1; i < in.length; i++) {
+            for (int j = 0; j < in.length; j++) {
+//                In insertion sort swapping happen at every comparison. where as selection does it once in every pass
+                if (in[i] < in[j]) {
+                    temp = in[i];
+                    in[i] = in[j];
+                    in[j] = temp;
                 }
             }
-            if (minIndex != i) {
-                temp = in[i];
-                in[i] = in[minIndex];
-                in[minIndex] = temp;
-            }
+
         }
     }
 }
