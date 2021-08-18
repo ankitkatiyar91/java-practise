@@ -26,7 +26,7 @@ public class InsertionSort {
     private static void sort(int[] in) {
         int temp;
         for (int i = 1; i < in.length; i++) {
-            for (int j = 0; j < in.length; j++) {
+            for (int j = 0; j < i; j++) {
 //                In insertion sort swapping happen at every comparison. where as selection does it once in every pass
                 if (in[i] < in[j]) {
                     temp = in[i];
@@ -34,7 +34,7 @@ public class InsertionSort {
                     in[j] = temp;
                 }
             }
-
+            System.out.println(Arrays.toString(in));
         }
     }
 }

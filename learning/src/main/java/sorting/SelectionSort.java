@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * Select one element and find lowest element in the right part and replace it
  * with that.
- *
+ * <b>Complexity (all case):</b> Ω(n^2), Θ(n^2), O(n^2)
  * @author ankitkatiyar91
  * <p>
  * Clarity: https://stackoverflow.com/a/15799095/3373597
