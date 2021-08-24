@@ -2,6 +2,9 @@ package leetcode;
 
 import java.util.Arrays;
 
+/**
+ * Problem: https://leetcode.com/problems/daily-temperatures/submissions/
+ */
 public class DailyTemperature {
     public static void main(String[] args) {
 //        int[] temperatures = new int[]{73, 74, 75, 71, 69, 72, 76, 73};
