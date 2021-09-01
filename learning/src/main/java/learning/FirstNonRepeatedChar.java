@@ -1,19 +1,21 @@
 package learning;
 
-public class FirstNonRepeatedChar
-{
+import java.util.Arrays;
 
-    public static void main(String[] args)
-    {
+public class FirstNonRepeatedChar {
+
+    public static void main(String[] args) {
         String in = "stress";
-        char k;
-        for (int i = 0; i < in.length(); i++)
-        {
-            k = in.charAt(i);
-            if (in.indexOf((int) k, i + 1) < 0)
-            {
-                System.out.println("First non matching charecter is: " + k + " at index: " + i);
-                break;
+        int[] chars = new int[26];
+        for (char c : in.toCharArray()) {
+            chars[c - 'a']++;
+        }
+
+        System.out.println(Arrays.toString(chars));
+
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] == 1) {
+                System.out.println("Non repeating char is:" + ((char) ('a' + i)));
             }
         }
     }
