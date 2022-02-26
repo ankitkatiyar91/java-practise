@@ -2,35 +2,35 @@ package collection;
 
 import java.util.HashMap;
 
-public class HashMapTest
-{
-    public static void main(String[] args)
-    {
-        HashMap<User, String> users = new HashMap<HashMapTest.User, String>();
-        users.put(new User(1, "a"), "1");
+public class HashMapTest {
+    public static void main(String[] args) {
+        User user1a = new User(1, "a");
+        HashMap<User, String> users = new HashMap<>();
+        users.put(user1a, "1");
         users.put(new User(2, "b"), "2");
         users.put(new User(3, "c"), "3");
+        users.put(null, "3");
+
+        System.out.println("Map contains" + users);
 
         System.out.println("Find 1,a: " + users.get(new User(1, "a")));
         System.out.println("Find 2,b: " + users.get(new User(2, "b")));
         System.out.println("Find 3,c: " + users.get(new User(3, "c")));
+        System.out.println("Find using existing object user1a: " + users.get(user1a));
     }
 
-    static class User
-    {
+    static class User {
         private Integer id;
         private String name;
 
-        public User(Integer id, String name)
-        {
+        public User(Integer id, String name) {
             super();
             this.id = id;
             this.name = name;
         }
 
         @Override
-        public String toString()
-        {
+        public String toString() {
             return "User [id=" + id + ", name=" + name + "]";
         }
 
@@ -45,8 +45,7 @@ public class HashMapTest
         }*/
 
         @Override
-        public boolean equals(Object obj)
-        {
+        public boolean equals(Object obj) {
             if (this == obj)
                 return true;
             if (obj == null)
@@ -54,19 +53,15 @@ public class HashMapTest
             if (getClass() != obj.getClass())
                 return false;
             User other = (User) obj;
-            if (id == null)
-            {
+            if (id == null) {
                 if (other.id != null)
                     return false;
-            }
-            else if (!id.equals(other.id))
+            } else if (!id.equals(other.id))
                 return false;
-            if (name == null)
-            {
+            if (name == null) {
                 if (other.name != null)
                     return false;
-            }
-            else if (!name.equals(other.name))
+            } else if (!name.equals(other.name))
                 return false;
             return true;
         }

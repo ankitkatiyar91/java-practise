@@ -13,7 +13,7 @@ import learning.User;
 @Target(value = { LOCAL_VARIABLE, ANNOTATION_TYPE, ElementType.TYPE })
 public @interface MyRuntimeAnnotation
 {
-    String name() default " jsahdksajd";
+    String name() default "default name";
 
     int rank() default 1;
 

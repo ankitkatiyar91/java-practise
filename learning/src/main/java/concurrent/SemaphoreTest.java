@@ -12,9 +12,9 @@ public class SemaphoreTest {
 
 	public static void main(String[] args) {
 		System.out.println("Created a semaphore object with value: " + semaphore.availablePermits());
-		Semaphoregetter s = new Semaphoregetter();
+		SemaphoreGetter s = new SemaphoreGetter();
 		s.setName("First");
-		Semaphoregetter s1 = new Semaphoregetter();
+		SemaphoreGetter s1 = new SemaphoreGetter();
 		s1.setName("Second");
 		new Thread(s, "First").start();
 		new Thread(s1, "Second").start();
@@ -29,7 +29,7 @@ public class SemaphoreTest {
 		semaphore.release();
 	}
 
-	static class Semaphoregetter implements Runnable {
+	static class SemaphoreGetter implements Runnable {
 
 		private String name;
 

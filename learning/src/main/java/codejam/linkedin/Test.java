@@ -7,6 +7,7 @@ public class Test
 {
     public static void main(String[] args)
     {
+        System.out.println("Enter the level of staircase you want");
         stiarcase();
 
         sum(new int[] { 1, 2, 3, 4, 5 });

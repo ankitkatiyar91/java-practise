@@ -18,7 +18,6 @@ public class CyclicBarrierTest {
 				barrier.await();
 				System.out.println("Yupieee got out of it-"+in);
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		};
