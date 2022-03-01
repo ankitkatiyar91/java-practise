@@ -1,5 +1,7 @@
 package util;
 
+import java.util.Arrays;
+
 /**
  *  Not needed anymore. java.util.Arrays.toString() will do th work.</code>
  */
@@ -23,12 +25,6 @@ public class ArrayUtils {
     }
 
     public static String printArray(int[] inputData) {
-        StringBuilder out = new StringBuilder("\n");
-        for (int j : inputData) {
-            out.append(j + ",");
-        }
-        out.deleteCharAt(out.length() - 1);
-//        out.append(String.format("%-*s\n", inputData.length));
-        return out.toString();
+        return Arrays.toString(inputData);
     }
 }

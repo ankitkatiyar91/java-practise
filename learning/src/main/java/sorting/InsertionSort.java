@@ -17,7 +17,8 @@ public class InsertionSort {
 
 
     public static void main(String[] args) {
-        int[] in = new int[]{5, 3, 7, 7, 1, 3, 9, 0};
+//        int[] in = new int[]{5, 3, 7, 7, 1, 3, 9, 0};
+        int[] in = new int[]{1,2,3,4,5,6,7,8};
         long start = System.nanoTime();
         sort(in);
         System.out.println(Arrays.toString(in) + " completed in " + (start - System.nanoTime()) + " nano seconds");
@@ -34,7 +35,6 @@ public class InsertionSort {
                     in[j] = temp;
                 }
             }
-            System.out.println(Arrays.toString(in));
         }
     }
 }

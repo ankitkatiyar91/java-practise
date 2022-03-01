@@ -6,6 +6,7 @@ import java.util.Arrays;
  * Select one element and find lowest element in the right part and replace it
  * with that.
  * <b>Complexity (all case):</b> Ω(n^2), Θ(n^2), O(n^2)
+ *
  * @author ankitkatiyar91
  * <p>
  * Clarity: https://stackoverflow.com/a/15799095/3373597
@@ -19,7 +20,7 @@ public class SelectionSort {
     }
 
     private static void sort(int[] in) {
-        int minIndex = 0, temp;
+        int minIndex, temp;
         for (int i = 0; i < in.length; i++) {
             minIndex = i;
             for (int j = i + 1; j < in.length; j++) {

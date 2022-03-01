@@ -1,7 +1,5 @@
 package sorting;
 
-import util.ArrayUtils;
-
 import java.util.Arrays;
 
 public class FindingNthLowest {
@@ -9,7 +7,7 @@ public class FindingNthLowest {
     public static void main(String[] args) {
         int[] in = new int[]{10, 4, 5, 7, 2, 3, 9, 8, 1, 6};
         int m = 4;
-        System.out.println(minWithN(in, m));
+        System.out.println(min(in, m));
     }
 
     /**
@@ -22,7 +20,7 @@ public class FindingNthLowest {
      */
     private static int min(int[] in, int m) {
         System.out.println("Original Array: " + Arrays.toString(in));
-
+        System.out.println("Looking to sort " + m + " elements");
         if (in.length < m) {
             throw new IllegalArgumentException("Not enough elements in array.");
         }
@@ -45,6 +43,7 @@ public class FindingNthLowest {
 
     private static int minWithN(int[] in, int m) {
         System.out.println("Original Array: " + Arrays.toString(in));
+        System.out.println("Looking to sort " + m + " elements");
         int[] newArray = new int[in.length];
         int left = 0, right = in.length - 1, start = 0, end = right;
         int midIndex = m - 1;

@@ -7,7 +7,7 @@ public class StringWhiteSpaceRemover {
 	 */
 	public static void main(String[] args) {
 		String s = "Tata Power Trading Company Limited";
-		s = s.replaceAll("\\s", " AND ");
+		s = s.replaceAll("\\s", "_");
 		System.out.println(s);
 
 	}

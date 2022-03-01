@@ -2,6 +2,8 @@ package sorting;
 
 import util.ArrayUtils;
 
+import java.util.Arrays;
+
 /**
  * Compare current and it's next element and arrange them in desired order
  *
@@ -15,11 +17,11 @@ public class BubbleSort {
     public static void sort(int[] input) {
         int temp;
         for (int i = 0; i < input.length; i++) {
-            for (int j = 0; j < input.length; j++) {
-                if (input[i] < input[j]) {
-                    temp = input[i];
-                    input[i] = input[j];
-                    input[j] = temp;
+            for (int j = 0; j < input.length - i - 1; j++) {
+                if (input[j] > input[j + 1]) {
+                    temp = input[j];
+                    input[j] = input[j + 1];
+                    input[j + 1] = temp;
                 }
             }
         }
@@ -35,11 +37,11 @@ public class BubbleSort {
         boolean swapped;
         for (int i = 0; i < input.length; i++) {
             swapped = false;
-            for (int j = 0; j < input.length; j++) {
-                if (input[i] < input[j]) {
-                    temp = input[i];
-                    input[i] = input[j];
-                    input[j] = temp;
+            for (int j = 0; j < input.length - i - 1; j++) {
+                if (input[j] > input[j + 1]) {
+                    temp = input[j];
+                    input[j] = input[j + 1];
+                    input[j + 1] = temp;
                     swapped = true;
                 }
             }
@@ -54,12 +56,12 @@ public class BubbleSort {
         int[] in = new int[]{5, 3, 7, 1, 3, 9, 0};
         long start = System.nanoTime();
         sort(in);
-        System.out.println(ArrayUtils.printArray(in) + " completed in " + (start - System.nanoTime()) + " nano seconds");
+        System.out.println(Arrays.toString(in) + " completed in " + (start - System.nanoTime()) + " nano seconds");
 
         in = new int[]{5, 3, 7, 1, 3, 9, 0};
         start = System.nanoTime();
         sortOptimized(in);
-        System.out.println(ArrayUtils.printArray(in) + " optimized completed in " + (start - System.nanoTime()) + " nano seconds");
+        System.out.println(Arrays.toString(in) + " optimized completed in " + (start - System.nanoTime()) + " nano seconds");
     }
 
 }

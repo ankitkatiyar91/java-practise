@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 public class PathExample
 {
@@ -12,7 +14,8 @@ public class PathExample
         // None of these methods requires that the file corresponding
         // to the Path exists.
         Path path = Paths.get("C:\\home\\joe\\foo");
-
+        System.out.printf("%o%n",8);
+        System.out.printf("%tY-%td%n", LocalDateTime.now());
         System.out.format("toString: %s%n", path.toString());
         System.out.format("getFileName: %s%n", path.getFileName());
         System.out.format("getName(0): %s%n", path.getName(0));
